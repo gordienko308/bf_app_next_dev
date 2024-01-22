@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import data from '@/lib/data'
+import Image from 'next/image';
+import data from '@/app/lib/data';
 import  { ProductItem } from '@/conponets/ProductItem'
 
 export default function Home() {
