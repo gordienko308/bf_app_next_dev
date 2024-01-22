@@ -19,21 +19,21 @@ export function ProductItem({product}: {
     return (
         <div className=''>
             <Link href={`/product/${product.slug}`}>
-                <Image
+                <img
                     src={product.image}
                     alt={product.description}
-                    width={0}
-                    height={0}
+                    width={400}
+                    height={400}
                 />
             </Link>
             <div className={'flex flex-col justify-center items-center p-5'}>
                 <Link href={`/product/${product.slug}`}>
-                    <h1 className=''>{product.name}</h1>
-                    <h3 className='text-cyan-500 mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1'>{product.description}</h3>
-                    <p className=''>{product.price}</p>
+                    <h1>{product.name}</h1>
+                    <h3>{product.description}</h3>
+                    <p>{product.price}</p>
 
                 </Link>
-                <button type='submit'>Выбрать дату </button>
+                <button type='button'> Выбрать дату </button>
             </div>
         </div>
     );

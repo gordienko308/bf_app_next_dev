@@ -1,5 +1,5 @@
 import data from '@/app/lib/data';
-import  { ProductItem } from '@/app/ui/ProductItem';
+import { ProductItem } from './ui/ProductItem';
 
 export default function Home() {
   return (
