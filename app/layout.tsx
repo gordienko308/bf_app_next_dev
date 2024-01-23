@@ -1,6 +1,4 @@
 import '@/app/ui/globals.css';
-import type { Metadata } from 'next';
-import { inter } from '@/app/ui/fonts';
 
 /*export const metadata: Metadata = {
   title: 'beautyfreedom',

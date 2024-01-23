@@ -4,3 +4,10 @@
 	float: left;
 	height: 100px;
 }
+
+.buttonAdd {
+    color: #fafafa;
+    background: #280e60;
+    font-size: 24px;
+    padding: 14px 40px;
+      }

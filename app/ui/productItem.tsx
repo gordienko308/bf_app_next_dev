@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import styles from '@/app/ui/home.module.css';
 
 export function ProductItem({product}: {
     product : {
@@ -33,7 +33,7 @@ export function ProductItem({product}: {
                     <p>{product.price}</p>
 
                 </Link>
-                <button type='button'> Выбрать дату </button>
+                <button className={styles.buttonAdd} type='button'> Выбрать дату </button>
             </div>
         </div>
     );
