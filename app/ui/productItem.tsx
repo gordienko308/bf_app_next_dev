@@ -18,7 +18,7 @@ export function ProductItem({product}: {
 }}) {
     return (
         <div className=''>
-            <Link href={'/cardproduct/'}>
+            <Link href={`/${product.slug}/cardproduct/`}>
                 <img
                     src={product.image}
                     alt={product.description}
@@ -27,7 +27,7 @@ export function ProductItem({product}: {
                 />
             </Link>
             <div className={'flex flex-col justify-center items-center p-5'}>
-                <Link href={'/cardproduct/'}>
+                <Link href={`/${product.slug}/cardproduct/`}>
                     <h1>{product.name}</h1>
                     <h3>{product.description}</h3>
                     <p>{product.price}</p>

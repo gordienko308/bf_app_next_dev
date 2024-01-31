@@ -1,3 +1,5 @@
+import { unstable_noStore } from "next/cache";
+
 const data = {
     products: [{
         name : 'Ариель',
@@ -73,4 +75,10 @@ const data = {
     },
 ]}
 
-export default data
+export default data;
+
+export async function fetchProductById(id: string) {
+    const product = data.products.find(i => i.slug === id)
+    
+    return product;
+}
