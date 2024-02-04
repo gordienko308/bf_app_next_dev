@@ -8,6 +8,7 @@ export default function Home() {
         {data.products.map((product) =>
           <ProductItem
             product={product}
+            dateS={data.dates[0].date}
             key={product.slug}
           />
         )}

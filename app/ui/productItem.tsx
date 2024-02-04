@@ -2,9 +2,9 @@ import * as React from 'react';
 import Link from 'next/link';
 import styles from '@/app/ui/home.module.css';
 
-export function ProductItem({product}: {
-    product : {
-        name : string,
+export function ProductItem({ product, dateS }: {
+    product: {
+        name: string,
         slug: string,
         category: string,
         image: string,
@@ -13,9 +13,10 @@ export function ProductItem({product}: {
         rating: number,
         numReviews: number,
         contInStock: number,
-        description: string, 
-    
-}}) {
+        description: string,
+
+    }, dateS: Date
+}) {
     return (
         <div className=''>
             <Link href={`/${product.slug}/cardproduct/`}>
@@ -29,7 +30,8 @@ export function ProductItem({product}: {
             <div className={'flex flex-col justify-center items-center p-5'}>
                 <Link href={`/${product.slug}/cardproduct/`}>
                     <h1>{product.name}</h1>
-                    <h3>{product.description}</h3>
+                    <h2>{'свободные места c ' + dateS.getDate() + ' ' + dateS.toLocaleString('deafoult', { month : 'short'})}</h2>
+                    <h3>{product.description}</h3> 
                     <p>{product.price}</p>
 
                 </Link>

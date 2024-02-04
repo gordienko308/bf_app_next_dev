@@ -2,7 +2,7 @@ import { unstable_noStore } from "next/cache";
 
 const data = {
     products: [{
-        name : 'Ариель',
+        name: 'Ариель',
         slug: '0001',
         category: 'Наращивание',
         image: '/images/001.png',
@@ -11,10 +11,10 @@ const data = {
         rating: 4.9,
         numReviews: 1,
         contInStock: 0,
-        description: 'Наращивание "Теперь лучше" выполненное профессионалами', 
+        description: 'Наращивание "Теперь лучше" выполненное профессионалами',
     },
     {
-        name : 'Рапунсель',
+        name: 'Рапунсель',
         slug: '0002',
         category: 'Наращивание',
         image: '/images/002.png',
@@ -23,10 +23,10 @@ const data = {
         rating: 3.7,
         numReviews: 1,
         contInStock: 0,
-        description: 'Наращивание "Теперь лучше" выполненное профессионалами', 
+        description: 'Наращивание "Теперь лучше" выполненное профессионалами',
     },
     {
-        name : 'Вероника',
+        name: 'Вероника',
         slug: '0003',
         category: 'Наращивание',
         image: '/images/003.png',
@@ -35,10 +35,10 @@ const data = {
         rating: 4.8,
         numReviews: 1,
         contInStock: 0,
-        description: 'Наращивание "Теперь лучше" выполненное профессионалами', 
+        description: 'Наращивание "Теперь лучше" выполненное профессионалами',
     },
     {
-        name : 'Зимняя вишня',
+        name: 'Зимняя вишня',
         slug: '0004',
         category: 'Наращивание',
         image: '/images/004.png',
@@ -47,10 +47,10 @@ const data = {
         rating: 5,
         numReviews: 1,
         contInStock: 0,
-        description: 'Наращивание "Теперь лучше" выполненное профессионалами', 
+        description: 'Наращивание "Теперь лучше" выполненное профессионалами',
     },
     {
-        name : 'CyberPank77',
+        name: 'CyberPank77',
         slug: '0005',
         category: 'Наращивание',
         image: '/images/005.png',
@@ -59,10 +59,10 @@ const data = {
         rating: 4.7,
         numReviews: 1,
         contInStock: 0,
-        description: 'Наращивание "Теперь лучше" выполненное профессионалами', 
+        description: 'Наращивание "Теперь лучше" выполненное профессионалами',
     },
     {
-        name : 'Теперь лучше',
+        name: 'Теперь лучше',
         slug: '0006',
         category: 'Наращивание',
         image: '/images/006.png',
@@ -71,14 +71,115 @@ const data = {
         rating: 4.9,
         numReviews: 1,
         contInStock: 0,
-        description: 'Наращивание "Теперь лучше" выполненное профессионалами', 
+        description: 'Наращивание "Теперь лучше" выполненное профессионалами',
     },
-]}
+    ],
+    dates: [
+        {
+            date: new Date(2024, 1, 4),
+            smene: 'с 10',
+        },
+        {
+            date: new Date(2024, 1, 4),
+            smene: 'с 15',
+        },
+        {
+            date: new Date(2024, 1, 5),
+            smene: 'с 10',
+        },
+        {
+            date: new Date(2024, 1, 5),
+            smene: 'с 15',
+        },
+        {
+            date: new Date(2024, 1, 6),
+            smene: 'с 10',
+        },
+        {
+            date: new Date(2024, 1, 6),
+            smene: 'с 15',
+        },
+        {
+            date: new Date(2024, 1, 7),
+            smene: 'с 10',
+        },
+        {
+            date: new Date(2024, 1, 7),
+            smene: 'с 15',
+        },
+        {
+            date: new Date(2024, 1, 8),
+            smene: 'с 10',
+        },
+        {
+            date: new Date(2024, 1, 8),
+            smene: 'с 15',
+        },
+        {
+            date: new Date(2024, 1, 9),
+            smene: 'с 10',
+        },
+        {
+            date: new Date(2024, 1, 9),
+            smene: 'с 15',
+        },
+        {
+            date: new Date(2024, 1, 10),
+            smene: 'с 10',
+        },
+        {
+            date: new Date(2024, 1, 10),
+            smene: 'с 15',
+        },
+        {
+            date: new Date(2024, 1, 11),
+            smene: 'с 10',
+        },
+        {
+            date: new Date(2024, 1, 11),
+            smene: 'с 15',
+        },
+        {
+            date: new Date(2024, 1, 12),
+            smene: 'с 10',
+        },
+        {
+            date: new Date(2024, 1, 12),
+            smene: 'с 15',
+        },
+        {
+            date: new Date(2024, 1, 13),
+            smene: 'с 10',
+        },
+        {
+            date: new Date(2024, 1, 13),
+            smene: 'с 15',
+        },
+        {
+            date: new Date(2024, 1, 14),
+            smene: 'с 10',
+        },
+        {
+            date: new Date(2024, 1, 14),
+            smene: 'с 15',
+        },
+        {
+            date: new Date(2024, 1, 15),
+            smene: 'с 10',
+        },
+        {
+            date: new Date(2024, 1, 15),
+            smene: 'с 15',
+        },
+
+
+    ]
+}
 
 export default data;
 
 export async function fetchProductById(id: string) {
     const product = data.products.find(i => i.slug === id)
-    
+
     return product;
 }
