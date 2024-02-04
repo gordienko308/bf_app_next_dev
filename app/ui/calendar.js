@@ -11,7 +11,7 @@ export default function CalendarGfg() {
 
 	return ( 
 		<div> 
-			<h1>NextJs Calendar - GeeksforGeeks</h1> 
+			 
 			<Calendar 
 				onChange={onChange} 
 				value={value} 
